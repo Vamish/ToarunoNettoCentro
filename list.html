@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/materialize.css"/>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+        footer {
+            width: 100%;
+        }
+
+        .collection-item [class*="mdi-"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar-fixed">
+    <div class="nav-wrapper blue">
+        <a href="#!" class="brand-logo"><img src="img/logo.png" alt="logo"/></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#"><i class="mdi-action-search"></i></a></li>
+            <li><a href="#"><i class="mdi-action-view-module"></i></a></li>
+            <li><a href="#"><i class="mdi-navigation-refresh"></i></a></li>
+            <li><a href="#"><i class="mdi-navigation-more-vert"></i></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="row content" style="margin-bottom: 0">
+    <div class="col l3 grey lighten-3 left" style="height: 100%">
+        <h6>网站列表</h6>
+        <ul class="collection">
+            <li class="collection-item"><i class="mdi-action-account-balance"></i>
+                <a href="http://ms.jmu.edu.cn" target="web">集美大学 工商管理学院</a>
+            </li>
+            <li class="collection-item"><i class="mdi-action-account-balance"></i>
+
+                <a href="http://soc.jmu.edu.cn" target="web">集美大学 法学院</a>
+            </li>
+            <li class="collection-item"><i class="mdi-action-account-balance"></i>
+                <a href="http://webplus.jmu.cn/s/79/main.jspy" target="web">集美大学 学校办公室</a>
+            </li>
+            <li class="collection-item"><i class="mdi-action-account-balance"></i>
+                <a href="http://szb.jmu.edu.cn" target="web">集美大学 思想政治部</a>
+            </li>
+        </ul>
+        <ul class="collection">
+            <li class="collection-item"><i class="mdi-action-account-balance"></i>
+                <a href="index.html" target="web">集美大学 网络中心</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col l9">
+        <iframe src="" frameborder="0" id="web" name="web"></iframe>
+    </div>
+</div>
+<footer class="page-footer modal-fixed-footer blue" style="position: absolute;bottom:0;margin-top: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Welcome</h5>
+
+                <p class="grey-text text-lighten-4">集合了部分我在JMU 所做的校内网站。</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">其他</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="http://sonitus.diviniti.cn" target="_blank">ToarunoSonitus</a>
+                    </li>
+                    <li><a class="grey-text text-lighten-3" href="http://mp.diviniti.cn">ToarunoMusicPlayer</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2015 Copyright Reserved.
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-2.1.4-min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var height = $(document).height() - $(".navbar-fixed").height() - $("footer").height() + "px";
+        $(".content").css("height", height);
+        $("#web").css("height", height);
+        $('.collapsible').collapsible({
+            accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+    });</script>
+</body>
+</html>
